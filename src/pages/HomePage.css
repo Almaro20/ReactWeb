@@ -1,0 +1,155 @@
+/* Reset básico para asegurar que todo el contenido ocupe toda la pantalla */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+  background-color: #1f1f1f;  /* Fondo oscuro con toque moderno */
+  color: #eaeaea; /* Color claro para el texto */
+  width: 100%;  /* Asegura que ocupe todo el ancho de la pantalla */
+}
+
+/* Contenedor principal de la página de inicio */
+.homepage-container {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(45deg, #4e9fd1, #6f3d91); /* Gradiente de colores vibrantes */
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  height: 100%;  /* Asegura que ocupe toda la altura disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+  max-width: 100%;  /* Removemos la restricción de ancho */
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto de desvanecimiento y aumento al pasar el mouse sobre el contenedor */
+.homepage-container:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* Asegúrate de que el Slider no se quede pegado al borde */
+.carousel-item {
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo de las imágenes dentro del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de zoom y sombra al pasar el ratón sobre las imágenes */
+.carousel-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo de los títulos */
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto de entrada para los títulos */
+h2:hover {
+  color: #ff1f5a;
+  transform: translateY(-5px);
+}
+
+/* Estilo de los puntos del carrusel */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Personaliza los puntos del carrusel */
+.slick-dots li button:before {
+  color: #ffffff;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Puntos activos con color vibrante */
+.slick-dots li.slick-active button:before {
+  color: #ff1f5a; /* Puntos en color vibrante */
+  opacity: 1;
+}
+
+/* Estilo del botón "Ver todos los juegos" */
+.btn-view-all {
+  margin-top: 35px;
+  padding: 18px 35px;
+  font-size: 22px;
+  background-color: #ff1f5a;
+  color: white;
+  border: none;
+  border-radius: 50px; 
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 40px rgba(255, 31, 90, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al hacer hover en el botón */
+.btn-view-all:hover {
+  background-color: #e40047;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 50px rgba(255, 31, 90, 0.6);
+}
+
+/* Enlaces dentro del botón sin subrayado */
+.btn-view-all a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.btn-view-all a:hover {
+  color: #ff9e2a;
+}
+
+/* Añadimos un poco de espacio entre los elementos para mejorar la apariencia */
+.homepage-container > * {
+  margin-bottom: 30px;
+}
+
+/* Agrega un pequeño borde de separación entre el contenedor y las imágenes */
+.carousel-item img {
+  border: 3px solid #ffffff; /* Borde blanco */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Animación para la entrada de los títulos y botones */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h2, .btn-view-all {
+  animation: fadeIn 1s ease-in-out;
+}
+
